@@ -12,7 +12,7 @@ func problem1() int {
 		i++
 	}
 	i = 1
-	for (4 * i) < 1000 {
+	for (3 * i) < 1000 {
 		sum2 += (3*i)
 		i++
 	}
