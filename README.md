@@ -1,4 +1,4 @@
 pe
 ==
 
-Project Euler problems in Go
+Project Euler problems using Go
