@@ -31,9 +31,28 @@ func Problem1V2() int {
 	}
 	return sum
 }
+/*
+func Problem1V3() int {
+	prev := 0
+	for i := 3; i < 1000; i+=3 {
+		if (i%5) ==0 {
+			prev = i
+		}
+		if (i + 1)%5 == 0 {
+			prev = (i+1)	
+		}
+		if (i-1)%5 == 0 {
+			prev = (i-1)
+		}
+		//fmt.Printf("Multiples of 3 and 5 are:%v %v\n", i, prev)
+	}
+	return prev
+}*/
 
 func main() {
 	fmt.Println("Sum of multiples of 3 or 5 less than 1000");
 	fmt.Printf("Algorithm 1: %v\n", Problem1())
 	fmt.Printf("Algorithm 2: %v\n", Problem1V2())
+//	fmt.Printf("Algorithm 3: %v\n", Problem1V3())
+	//Problem1V3()
 }
