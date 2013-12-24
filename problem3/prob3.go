@@ -28,6 +28,7 @@ func Algorithm1(x uint64) uint64 {
 }
 
 //Function to validate a number
+//TODO: Change IsPrime to a function that returns two values, isprime bool and sqrtvalue of number
 func IsPrime(x uint64) bool {
 	var status = true;
 	var i, cmp uint64 = 2, uint64(math.Sqrt(float64(x)))
@@ -43,21 +44,22 @@ func IsPrime(x uint64) bool {
 	Algorithm 2
 */
 func Algorithm2(x int) int {
-	var prime, i int = 0, 2 
-	for i <= x/2 {
+	var lpf, i int = 0, 2 
+	for i <= int(math.Sqrt(float64(x))) {
 		fmt.Println(i)
 		if IsPrime(uint64(i)) && (x % i == 0) {
-			prime = x / i;
-			fmt.Println(prime)
-			Algorithm2(prime);
+			lpf = x / i;
+			fmt.Println(lpf)
+			Algorithm2(lpf);
 		} else {
 			i += 1
 		}
 	}
-	return prime
+	return lpf
 }
 
 func main() {
-	fmt.Printf("Largest Prime number:%v\n",Algorithm1(600851475143));
+	//TODO: Make this program accept inline arguments. If no inline arguments are passed, then set it to defaultvalues as in ProjectEuler question
+	//fmt.Printf("Largest Prime number:%v\n",Algorithm1(600851475143));
 	//fmt.Printf("largest Prime number: %v\n", Algorithm2(15));
 }
