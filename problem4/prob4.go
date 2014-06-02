@@ -2,16 +2,23 @@ package main
 
 import (
 	"fmt"
-	"strconv"
+//	"strconv"
 	"unicode/utf8"
+//	"os"
 )
-func LargestPalindrome() string {
+func LargestPalindrome() {
 	for	i := 999; i > 99; i-- {
 		for j := 999; j > 99; j-- {
-			IsPalindrome(strconv.Itoa(i * j));
+			/*if (j * i) == 998001 {
+				os.Exit(0)
+			}*/
+			//fmt.Println(j * i)
+			/*if IsPalindrome(strconv.Itoa(i * j)) {
+				fmt.Println(i * j)
+				os.Exit(0)
+			}*/
 		}
 	}
-	return "Anvesh"
 }
 
 func IsPalindrome(str string) bool {
@@ -32,6 +39,5 @@ func Reverse(str string) string {
 
 func main() {
 	fmt.Println("Project Euler - 4")
-	//fmt.Printf("The largest palindrome: %v\n",LargestPalindrome())
-	fmt.Println(IsPalindrome("sahas"))
+	LargestPalindrome();
 }
