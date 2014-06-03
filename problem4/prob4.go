@@ -2,23 +2,21 @@ package main
 
 import (
 	"fmt"
-//	"strconv"
+	"strconv"
 	"unicode/utf8"
-//	"os"
 )
 func LargestPalindrome() {
+	var largestNum int;
 	for	i := 999; i > 99; i-- {
 		for j := 999; j > 99; j-- {
-			/*if (j * i) == 998001 {
-				os.Exit(0)
-			}*/
-			//fmt.Println(j * i)
-			/*if IsPalindrome(strconv.Itoa(i * j)) {
-				fmt.Println(i * j)
-				os.Exit(0)
-			}*/
+			if IsPalindrome(strconv.Itoa(i * j)) {
+				if i * j > largestNum {
+					largestNum = i * j
+				}
+			}
 		}
 	}
+	fmt.Println(largestNum)
 }
 
 func IsPalindrome(str string) bool {
