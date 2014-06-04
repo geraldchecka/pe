@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"unicode/utf8"
 )
-func LargestPalindrome() {
+func LargestPalindrome() int {
 	var largestNum int;
 	for	i := 999; i > 99; i-- {
 		for j := 999; j > 99; j-- {
@@ -16,7 +16,7 @@ func LargestPalindrome() {
 			}
 		}
 	}
-	fmt.Println(largestNum)
+	return largestNum
 }
 
 func IsPalindrome(str string) bool {
@@ -37,5 +37,5 @@ func Reverse(str string) string {
 
 func main() {
 	fmt.Println("Project Euler - 4")
-	LargestPalindrome();
+	fmt.Println(LargestPalindrome())
 }
