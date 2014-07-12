@@ -17,9 +17,9 @@ func Algorithm1() int {
 		}
 		if isPrime {
 			index++
-		}
-		if index == 10001 {
-			return i
+			if index == 10001 {
+				return i
+			}
 		}
 
 	}
