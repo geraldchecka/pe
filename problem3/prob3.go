@@ -24,8 +24,8 @@ func Algorithm1(x uint64) uint64 {
 
 func IsPrime(x uint64) bool {
 	var status = true;
-	var i, cmp uint64 = 2, uint64(math.Sqrt(float64(x)))
-	for ; i <= cmp; i++ {
+	var i, cmp uint64 = 3, uint64(math.Sqrt(float64(x)))
+	for ; i <= cmp; i+=2 {
 		if x%i == 0 {
 		    status = false;
 		}	
@@ -34,15 +34,14 @@ func IsPrime(x uint64) bool {
 }
 
 //Algorithm 2
-//Initially I tried this using recursive functions, but that didn't work
 func Algorithm2(x int) int {
 	var lpf int = 0
-	for i := 2; i <= x; i++ {
+	for i := 3; i <= x; i+=2 {
 	    if IsPrime(uint64(i)) {
-		for x % i == 0 {
-		    x = x / i
+			for x % i == 0 {
+				x = x / i
+			}
 		}
-	    }
 	    lpf = i
 	}
 	return lpf
